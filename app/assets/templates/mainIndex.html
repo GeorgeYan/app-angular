@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a ng-click="navHome()" class="navbar-brand">My Blog</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li> <a ng-click="navNewPost()">New Post</a> </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container" style="margin-top: 40px">
+  <h1 class="text-center">My blog</h1>
+  <div class="row" ng-repeat="post in data.posts">
+    <h2><a ng-click="viewPost(post.id)">{{ post.title }}</a></h2>
+    <button type="button" class="btn btn-danger pull-right" ng-click="delete(post.id)">Delete</button>
+    <p>{{ post.contents }}</p>
+  </div>
+</div>
+
+ <pagination num-pages="noOfPages" current-page="currentPage" class="pagination-small"></pagination>

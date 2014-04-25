@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a ng-click="navHome()" class="navbar-brand">My Blog</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li> <a ng-click="navNewPost()">New Post</a> </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container" style="margin-top: 40px">
+  <h1 class="text-center">Edit post - {{ data.postId }}</h1>
+  <form>
+    <fieldset>
+      <label><strong>Title</strong></label>
+      <input class="form-control" ng-model="data.currentPost.title" type="text" maxlength="250">
+      <label><strong>Content</strong></label>
+      <textarea class="form-control" rows="3" ng-model="data.currentPost.contents"></textarea>
+      <button class="btn btn-primary" ng-click="updatePost(data.postId)">Update</button>
+      <button class="btn btn-danger pull-right" ng-click="cancel(data.postId)">Cancel</button>
+    </fieldset>
+  </form>
+</div>

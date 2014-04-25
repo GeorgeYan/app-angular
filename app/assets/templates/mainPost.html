@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a href="#" class="navbar-brand">My Blog</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li> <a ng-click="navNewPost()">New Post</a> </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container" style="margin-top: 40px">
+  <h1 class="text-center">{{ data.postId }} - {{ data.currentPost.title}}</h1>
+  <div class="row">
+    <p>{{ data.currentPost.contents }}</p>
+  </div>
+  <div class="row">
+    <button class="btn btn-default" ng-click="editPost(data.postId)">Edit</button>
+  </div>
+</div>
